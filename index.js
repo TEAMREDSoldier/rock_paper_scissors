@@ -1,4 +1,4 @@
-/* eslint-disable comma-dangle */ //линтер выдаёт ошибку в строке 33 Missing trailing comma, но я понятия не имею в чём дело, а так код работает.
+/* eslint-disable comma-dangle */
 
 import readlineSync from 'readline-sync';
 
