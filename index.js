@@ -2,26 +2,28 @@ import readlineSync from 'readline-sync';
 
 const choices = ['камень', 'ножницы', 'бумага'];
 
-function getRandomChoice() {
+const getRandomChoice = () => {
   const randomIndex = Math.floor(Math.random() * choices.length);
   return choices[randomIndex];
 }
 
-function determineWinner(userChoice, computerChoice) {
+const determineWinner = (userChoice, computerChoice) => {
   if (userChoice === computerChoice) {
     return 'Ничья!';
-  } else if (
+  }
+
+  if (
     (userChoice === 'камень' && computerChoice === 'ножницы') ||
     (userChoice === 'ножницы' && computerChoice === 'бумага') ||
     (userChoice === 'бумага' && computerChoice === 'камень')
   ) {
     return 'Вы победили!';
-  } else {
-    return 'Компьютер победил!';
   }
-}
 
-function playGame() {
+  return 'Компьютер победил!';
+};
+
+const playGame = () => {
   console.log('Добро пожаловать в игру "Камень, Ножницы, Бумага"!\n');
 
   let userChoice = readlineSync.question(
@@ -37,6 +39,8 @@ function playGame() {
 
   console.log(`Компьютер выбрал: ${computerChoice}`);
   console.log(determineWinner(userChoice, computerChoice));
-}
+};
+
+export default playGame;
 
 playGame();
