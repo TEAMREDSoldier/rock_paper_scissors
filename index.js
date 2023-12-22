@@ -27,7 +27,7 @@ const playGame = () => {
   console.log('Добро пожаловать в игру "Камень, Ножницы, Бумага"!\n');
 
   let userChoice = readlineSync.question(
-    'Выберите ваш вариант (камень, ножницы, бумага): '
+    'Выберите ваш вариант (камень, ножницы, бумага.): '
   ).toLowerCase();
 
   while (!choices.includes(userChoice)) {
