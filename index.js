@@ -15,7 +15,7 @@ const determineWinner = (userChoice, computerChoice) => {
   if (
     (userChoice === 'камень' && computerChoice === 'ножницы')
     || (userChoice === 'ножницы' && computerChoice === 'бумага')
-    ||(userChoice === 'бумага' && computerChoice === 'камень')
+    || (userChoice === 'бумага' && computerChoice === 'камень')
   ) {
     return 'Вы победили!';
   }
@@ -42,6 +42,5 @@ const playGame = () => {
 };
 
 export default playGame;
-
 
 playGame();
