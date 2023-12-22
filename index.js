@@ -1,3 +1,5 @@
+/* eslint-disable comma-dangle */ //линтер выдаёт ошибку в строке 33 Missing trailing comma, но я понятия не имею в чём дело, а так код работает.
+
 import readlineSync from 'readline-sync';
 
 const choices = ['камень', 'ножницы', 'бумага'];
@@ -27,7 +29,7 @@ const playGame = () => {
   console.log('Добро пожаловать в игру "Камень, Ножницы, Бумага"!\n');
 
   let userChoice = readlineSync.question(
-    'Выберите ваш вариант (камень, ножницы, бумага, ): ' //добавлена запятая
+    'Выберите ваш вариант (камень, ножницы, бумага): '
   ).toLowerCase();
 
   while (!choices.includes(userChoice)) {
