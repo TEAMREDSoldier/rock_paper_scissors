@@ -5,7 +5,7 @@ const choices = ['камень', 'ножницы', 'бумага'];
 const getRandomChoice = () => {
   const randomIndex = Math.floor(Math.random() * choices.length);
   return choices[randomIndex];
-}
+};
 
 const determineWinner = (userChoice, computerChoice) => {
   if (userChoice === computerChoice) {
@@ -13,9 +13,9 @@ const determineWinner = (userChoice, computerChoice) => {
   }
 
   if (
-    (userChoice === 'камень' && computerChoice === 'ножницы') ||
-    (userChoice === 'ножницы' && computerChoice === 'бумага') ||
-    (userChoice === 'бумага' && computerChoice === 'камень')
+    (userChoice === 'камень' && computerChoice === 'ножницы')
+    || (userChoice === 'ножницы' && computerChoice === 'бумага')
+    ||(userChoice === 'бумага' && computerChoice === 'камень')
   ) {
     return 'Вы победили!';
   }
@@ -42,5 +42,6 @@ const playGame = () => {
 };
 
 export default playGame;
+
 
 playGame();
